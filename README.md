@@ -1,5 +1,10 @@
-The TimeSeriesR script was utilized to simplify implementation and to facilitate replicability of the case study performed in "Time series grouping algorithm for load pattern recognition" (https://doi.org/10.1016/j.compind.2019.07.009).
+# TimeSeriesR: Time Series Machine Learning in R
+The TimeSeriesR package contains an implementation of various machine learning methods for time series representation, clustering, and forecasting. Please note that this implementation is made as a proof of concept, and not as a complete production-ready package.
 
-The TimeSeriesR script can be executed from an integrated development enviroment for R language or it can be called from Command Prompt. To get more information on parameters that can be passed from Command Prompt to the TimeSeriesR script, please install Microsoft R client and then execute the following command from Command Prompt:
+The Load Pattern Recognition ([LPR](https://github.com/igormanojlovic/TimeSeriesR/blob/main/R/LPR.R)) script was used to test cluster validity and execution time for the case study performed in [Time series grouping algorithm for load pattern recognition](https://doi.org/10.1016/j.compind.2019.07.009). The case study was conducted on real smart meter data from three distribution networks: one North American and the other two European. However, only the [UK Power Networks](https://data.london.gov.uk/dataset/smartmeter-energy-use-data-in-london-households) dataset is publicly available. To replicate the clustering results from the paper, first prepare the concatenated Average Normalized Daily Load Profiles (ANDLPs) according to the procedure presented in the paper, and then run the LPR script on the prepared data.
 
-"C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\Rscript.exe" "full path to the TimeSeriesR script"
+The Time Series Forecasting ([TSF](https://github.com/igormanojlovic/TimeSeriesR/blob/main/R/TSF.R)) script was used to test forecast accuracy and execution time on two real smart meter datasets: one North American ([UMass](http://traces.cs.umass.edu/index.php/Smart/Smart)) and the other Australian ([SGSC](https://data.gov.au/data/dataset/smart-grid-smart-city-customer-trial-data)). The preprocessed datasets, that can be directly used by the TSF script, can be downloaded from [here](https://drive.google.com/drive/folders/1NQzzJPHfZxRzp7En_GtJkNQ4AAfTgMk4).
+
+Prerequisites: 
+1. [R 4.1.2+](https://cran.r-project.org/bin/windows/base/)
+2. [RTools 4.0+](https://cran.r-project.org/bin/windows/Rtools/)
